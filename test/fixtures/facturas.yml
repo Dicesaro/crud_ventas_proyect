@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pedido: one
+  numero_factura: MyString
+  fecha_emision: 2024-10-30
+  total: 9.99
+  iva: 9.99
+  descuento: 9.99
+
+two:
+  pedido: two
+  numero_factura: MyString
+  fecha_emision: 2024-10-30
+  total: 9.99
+  iva: 9.99
+  descuento: 9.99

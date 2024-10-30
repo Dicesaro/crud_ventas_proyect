@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  descripcion: MyText
+  fecha_creacion: 2024-10-30
+  estado: MyString
+  codigo: MyString
+  tipo: MyString
+
+two:
+  nombre: MyString
+  descripcion: MyText
+  fecha_creacion: 2024-10-30
+  estado: MyString
+  codigo: MyString
+  tipo: MyString
