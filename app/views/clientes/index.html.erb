@@ -4,13 +4,17 @@
 
 <h1>Clientes</h1>
 
-<div id="clientes">
+<%= link_to "+ Agregar Cliente", new_cliente_path, class: "btn_add" %>
+
+<div class="clientes">
   <% @clientes.each do |cliente| %>
+   <div class="cliente">
     <%= render cliente %>
+   <br>
     <p>
-      <%= link_to "Show this cliente", cliente %>
+      <%= link_to "Mostrar cliente", cliente, class: "btn_show" %>
     </p>
+   </div>
   <% end %>
 </div>
 
-<%= link_to "New cliente", new_cliente_path %>

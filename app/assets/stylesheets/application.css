@@ -1,15 +1,147 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   min-height: 100vh;
+   font-family: sans-serif;
+   background-color: #f5f5f5;
+}
+
+h1 {
+   color: rgb(62, 116, 170);
+}
+
+a {
+   text-decoration: none;
+}
+
+.botones {
+   display: flex;
+   gap: 20px;
+
+   & :nth-child(1) {
+      color: rgb(149, 52, 107);
+      font-size: larger;
+   }
+
+   & :nth-child(2) {
+      color: rgb(95, 188, 102);
+      font-size: larger;
+   }
+}
+
+.btn_add {
+   color: rgb(95, 188, 102);
+   font-weight: 700;
+   font-size: 20px;
+}
+
+.btn_show {
+   color: rgb(149, 52, 107);
+   font-size: 18px;
+}
+
+
+.clientes {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+
+   .cliente {
+      display: flex;
+      flex-direction: column;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      padding: 30px;
+      width: 400px;
+      border: thin solid rgb(62, 116, 170);
+      border-radius: 10px;
+
+      & .data-cliente {
+         font-size: 16px;
+         font-family: sans-serif;
+      }
+   }
+}
+
+.form_cliente {
+   display: flex;
+   flex-direction: column;
+   padding: 50px;
+   min-width: 400px;
+   border-radius: 10px;
+   border: medium solid rgb(62, 116, 170);
+   box-shadow: 0 0 5px rgb(62, 116, 170);
+   gap: 20px;
+
+   & .form_nuevo_cliente {
+      display: flex;
+      flex-direction: column;
+
+      & label {
+         font-size: 20px;
+         font-weight: 700;
+      }
+
+      & input {
+         padding: 10px;
+         border-radius: 5px;
+         border: none;
+         border: thin solid rgb(62, 116, 170);
+         margin-bottom: 20px;
+         width: 100%;
+      }
+
+      & select {
+         padding: 10px;
+         border-radius: 5px;
+         border: none;
+         border: thin solid rgb(62, 116, 170);
+         margin-bottom: 20px;
+         width: 100%;
+      }
+   }
+}
+
+.show_cliente {
+   display: flex;
+   flex-direction: column;
+   padding: 50px;
+   gap: 20px;
+   min-width: 400px;
+   border-radius: 10px;
+   border: medium solid rgb(62, 116, 170);
+
+   & .botones {
+      display: flex;
+      gap: 20px;
+
+      & :nth-child(1) {
+         color: rgb(149, 52, 107);
+         font-size: larger;
+      }
+
+      & :nth-child(2) {
+         color: rgb(95, 188, 102);
+         font-size: larger;
+      }
+   }
+
+   & button {
+      padding: 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: rgb(172, 23, 31);
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+   }
+}

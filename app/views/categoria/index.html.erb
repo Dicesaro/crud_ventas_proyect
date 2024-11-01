@@ -5,10 +5,10 @@
 <h1>Categoria</h1>
 
 <div id="categoria">
-  <% @categoria.each do |categorium| %>
-    <%= render categorium %>
+  <% @categorias.each do |categorias| %>
+    <%= render categorias %>
     <p>
-      <%= link_to "Show this categorium", categorium %>
+      <%= link_to "Show this categorium", categorias %>
     </p>
   <% end %>
 </div>

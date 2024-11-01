@@ -1,5 +1,5 @@
 class ProductosController < ApplicationController
-  before_action :set_producto, only: %i[ show edit update destroy ]
+  before_action :set_producto, only: %i[show edit update destroy]
 
   # GET /productos or /productos.json
   def index
@@ -13,15 +13,22 @@ class ProductosController < ApplicationController
   # GET /productos/new
   def new
     @producto = Producto.new
+    @categorias = Categoria.all # Carga todas las categorías disponibles
+    @proveedores = Proveedor.all # Carga todos los proveedores disponibles
   end
 
   # GET /productos/1/edit
   def edit
+    @producto = Producto.find(params[:id])
+    @categorias = Categoria.all
+    @proveedores = Proveedor.all
   end
 
   # POST /productos or /productos.json
   def create
     @producto = Producto.new(producto_params)
+    @categorias = Categoria.all # Carga las categorías para el render
+    @proveedores = Proveedor.all # Carga los proveedores para el render
 
     respond_to do |format|
       if @producto.save
@@ -58,13 +65,14 @@ class ProductosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_producto
-      @producto = Producto.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def producto_params
-      params.require(:producto).permit(:nombre, :descripcion, :precio, :stock, :categoria_id, :proveedor_id, :fecha_creacion)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_producto
+    @producto = Producto.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def producto_params
+    params.require(:producto).permit(:nombre, :descripcion, :precio, :stock, :categoria_id, :proveedor_id, :fecha_creacion)
+  end
 end

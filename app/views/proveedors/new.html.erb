@@ -1,11 +1,15 @@
 <% content_for :title, "New proveedor" %>
 
+<div class="form_cliente">
+
 <h1>New proveedor</h1>
 
+   <div class="form_nuevo_cliente">
 <%= render "form", proveedor: @proveedor %>
-
+   </div>
+</div>
 <br>
 
 <div>
-  <%= link_to "Back to proveedors", proveedors_path %>
+  <%= link_to "Back to proveedors", proveedors_path, class: "btn_show"  %>
 </div>

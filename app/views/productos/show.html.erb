@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="show_cliente">
 <%= render @producto %>
-
-<div>
-  <%= link_to "Edit this producto", edit_producto_path(@producto) %> |
-  <%= link_to "Back to productos", productos_path %>
-
-  <%= button_to "Destroy this producto", @producto, method: :delete %>
+<div class="botones">
+  <%= link_to "Editar producto ✏️", edit_producto_path(@producto), class: "btn_edit" %>
+  <%= link_to "Ir a Productos 👈", productos_path %>
+  </div>
+  <%= button_to "Eliminar producto 🗑️", @producto, method: :delete %>
 </div>

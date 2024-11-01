@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :descripcion, style: "display: block" %>
-    <%= form.text_area :descripcion %>
+    <%= form.text_field :descripcion %>
   </div>
 
   <div>
@@ -31,15 +31,15 @@
     <%= form.number_field :stock %>
   </div>
 
-  <div>
-    <%= form.label :categoria_id, style: "display: block" %>
-    <%= form.text_field :categoria_id %>
-  </div>
+   <div>
+    <%= form.label :categoria_name, "Categoría", style: "display: block" %>
+    <%= form.collection_select :categoria_id, @categorias, :id, :nombre, prompt: "Selecciona una categoría" %>
+   </div>
 
-  <div>
-    <%= form.label :proveedor_id, style: "display: block" %>
-    <%= form.text_field :proveedor_id %>
-  </div>
+   <div>
+     <%= form.label :proveedor_name, "Proveedor", style: "display: block" %>
+     <%= form.collection_select :proveedor_id, @proveedores, :id, :nombre, prompt: "Selecciona un proveedor" %>
+   </div>
 
   <div>
     <%= form.label :fecha_creacion, style: "display: block" %>

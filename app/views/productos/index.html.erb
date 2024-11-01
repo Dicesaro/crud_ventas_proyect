@@ -4,13 +4,17 @@
 
 <h1>Productos</h1>
 
-<div id="productos">
+<%= link_to " + Agregar Producto", new_producto_path, class: "btn_add" %>
+
+<div class="clientes">
   <% @productos.each do |producto| %>
+      <div class="cliente">
     <%= render producto %>
+    <br>
     <p>
-      <%= link_to "Show this producto", producto %>
+      <%= link_to "Show this producto", producto, class: "btn_show" %>
     </p>
+   </div>
   <% end %>
 </div>
 
-<%= link_to "New producto", new_producto_path %>

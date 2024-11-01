@@ -3,14 +3,17 @@
 <% content_for :title, "Proveedors" %>
 
 <h1>Proveedors</h1>
+<%= link_to "+ Agregar Proveedor", new_proveedor_path, class: "btn_add" %>
 
-<div id="proveedors">
+<div class="clientes">
   <% @proveedors.each do |proveedor| %>
+   <div class="cliente">
     <%= render proveedor %>
+    <br>
     <p>
-      <%= link_to "Show this proveedor", proveedor %>
+      <%= link_to "Show this proveedor", proveedor , class: "btn_show"%>
     </p>
+     </div>
   <% end %>
 </div>
 
-<%= link_to "New proveedor", new_proveedor_path %>
