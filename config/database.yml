@@ -1,0 +1,31 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: crud_ventas
+  host: localhost
+  username: postgres
+  password: cesaro
+  port: 5432
+
+development:
+  <<: *default
+  database: crud_ventas
+  host: localhost
+  username: postgres
+  password: cesaro
+  port: 5432
+
+test:
+  <<: *default
+  database: crud_ventas
+  username: postgres
+  password: cesaro
+  host: localhost
+
+production:
+  <<: *default
+  database: crud_ventas
+  host: localhost
+  username: postgres
+  password: cesaro
+  port: 5432
